@@ -26,19 +26,19 @@ function playRound(playerSelection, computerSelection){
 
     try {
         if(playerChoice == computerChoice){
-            return "It's a tie!";
+            return "Computer chose "+ computerChoice + "\n" + "It's a tie!";
         }else if(playerChoice == "ROCK" && computerChoice == "PAPER"){
-            return "You Lose! Paper beats rock.";
+            return "Computer chose "+ computerChoice + "\n" + "You Lose! Paper beats rock.";
         }else if(playerChoice == "ROCK" && computerChoice == "SCISSORS"){
-            return "You WIN! Rock beats scissors.";
+            return "Computer chose "+ computerChoice + "\n" + "You WIN! Rock beats scissors.";
         }else if(playerChoice == "PAPER" && computerChoice == "ROCK"){
-            return "You Lose! Rock beats paper.";
+            return "Copmuter chose "+ computerChoice + "\n" + "You Lose! Rock beats paper.";
         }else if(playerChoice == "PAPER" && computerChoice == "SCISSORS"){
-            return "You Lose! Scissors beats paper.";
+            return "Computer chose " + computerChoice + "\n" + "You Lose! Scissors beats paper.";
         }else if(playerChoice == "SCISSORS" && computerChoice == "ROCK"){
-            return "You Lose! Rock beats scissors.";
+            return "Computer chose " + computerChoice + "\n" + "You Lose! Rock beats scissors.";
         }else if(playerChoice == "SCISSORS" && computerChoice == "PAPER"){
-            return "You Win! Scissors beats paper.";
+            return "Computer chose " + computerChoice + "\n" + "You Win! Scissors beats paper.";
         }else{
             return "Error: Invalid Choice."
         }
