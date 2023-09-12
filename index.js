@@ -61,6 +61,13 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
+    while(playRound < 4){
+ 
+
+        i++;
+    }
+
+
     // let i = 0;
     // while(i < 5){
     //     // ask more questions till loop ends
