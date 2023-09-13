@@ -44,36 +44,53 @@ function playRound(playerSelection, computerSelection){
         else if(playerChoice == "ROCK" && computerChoice == "PAPER"){
             resultEl.textContent = "Computer chose "+ computerChoice + "\n" + "You Lose! Paper beats rock.";
             computerScore += 1;
+            // If this win gets a player/computer to win, tells game to announce
+            // the winner automatically (without needing to click a choice button again)
+            if(computerScore == 5){
+                game();
+            }
         }
         else if(playerChoice == "ROCK" && computerChoice == "SCISSORS"){
             resultEl.textContent = "Computer chose "+ computerChoice + "\n" + "You WIN! Rock beats scissors.";
             playerScore += 1;
+            if(playerScore == 5){
+                game();
+            }
         }
         else if(playerChoice == "PAPER" && computerChoice == "ROCK"){
             resultEl.textContent = "Copmuter chose "+ computerChoice + "\n" + "You Lose! Rock beats paper.";
             computerScore += 1;
+            if(computerScore == 5){
+                game();
+            }
         }
         else if(playerChoice == "PAPER" && computerChoice == "SCISSORS"){
             resultEl.textContent = "Computer chose " + computerChoice + "\n" + "You Lose! Scissors beats paper.";
             computerScore += 1;
+            if(computerScore == 5){
+                game();
+            }
         }
         else if(playerChoice == "SCISSORS" && computerChoice == "ROCK"){
             resultEl.textContent = "Computer chose " + computerChoice + "\n" + "You Lose! Rock beats scissors.";
             computerScore += 1;
+            if(computerScore == 5){
+                game();
+            }
         }
         else if(playerChoice == "SCISSORS" && computerChoice == "PAPER"){
             resultEl.textContent = "Computer chose " + computerChoice + "\n" + "You Win! Scissors beats paper.";
             playerScore += 1;
+            if(playerScore == 5){
+                game();
+            }
         }
         else{
             resultEl.textContent = "Error";
         }
     } catch (error) {
         return "Incorrect Input";
-    }
-    // console.log("playround() player " + playerScore);
-    // console.log(" playround() computer " + computerScore);
-    
+    }    
 }
 
 function game(){
@@ -87,10 +104,5 @@ function game(){
         computerScoreEL.textContent = computerScore;
         playerScoreEL.textContent = playerScore;
     }
-    // console.log("game() player " + playerScore);
-    // console.log(" game() computer " + computerScore);
-
-
-
 }
 
