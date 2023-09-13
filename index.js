@@ -2,6 +2,7 @@
 let userChoice = "";
 let compChoice = "";
 let playerScore = 0;
+let computerScore = 0;
 
 const btnEls = document.querySelectorAll("button");
 const resultEl = document.querySelector("#results");
@@ -12,6 +13,7 @@ btnEls.forEach((b) =>{
         userChoice = b.textContent;
         compChoice = getComputerChoice();
         playRound(userChoice, compChoice);
+        game();
     });
 });
 
@@ -39,19 +41,32 @@ function playRound(playerSelection, computerSelection){
     try {
         if(playerChoice == computerChoice){
             resultEl.textContent = "Computer chose "+ computerChoice + "\n" + "It's a tie!"
-        }else if(playerChoice == "ROCK" && computerChoice == "PAPER"){
+        }
+        else if(playerChoice == "ROCK" && computerChoice == "PAPER"){
             resultEl.textContent = "Computer chose "+ computerChoice + "\n" + "You Lose! Paper beats rock.";
-        }else if(playerChoice == "ROCK" && computerChoice == "SCISSORS"){
+            computerScore += 1;
+        }
+        else if(playerChoice == "ROCK" && computerChoice == "SCISSORS"){
             resultEl.textContent = "Computer chose "+ computerChoice + "\n" + "You WIN! Rock beats scissors.";
-        }else if(playerChoice == "PAPER" && computerChoice == "ROCK"){
+            playerScore += 1;
+        }
+        else if(playerChoice == "PAPER" && computerChoice == "ROCK"){
             resultEl.textContent = "Copmuter chose "+ computerChoice + "\n" + "You Lose! Rock beats paper.";
-        }else if(playerChoice == "PAPER" && computerChoice == "SCISSORS"){
+            computerScore += 1;
+        }
+        else if(playerChoice == "PAPER" && computerChoice == "SCISSORS"){
             resultEl.textContent = "Computer chose " + computerChoice + "\n" + "You Lose! Scissors beats paper.";
-        }else if(playerChoice == "SCISSORS" && computerChoice == "ROCK"){
+            computerScore += 1;
+        }
+        else if(playerChoice == "SCISSORS" && computerChoice == "ROCK"){
             resultEl.textContent = "Computer chose " + computerChoice + "\n" + "You Lose! Rock beats scissors.";
-        }else if(playerChoice == "SCISSORS" && computerChoice == "PAPER"){
+            computerScore += 1;
+        }
+        else if(playerChoice == "SCISSORS" && computerChoice == "PAPER"){
             resultEl.textContent = "Computer chose " + computerChoice + "\n" + "You Win! Scissors beats paper.";
-        }else{
+            playerScore += 1;
+        }
+        else{
             resultEl.textContent = "Error";
         }
     } catch (error) {
@@ -61,19 +76,9 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    while(playRound < 4){
- 
 
-        i++;
-    }
-
-
-    // let i = 0;
-    // while(i < 5){
-    //     // ask more questions till loop ends
-    //     userChoice = window.prompt("Rock, Paper or Scissors?");
-    //     alert(playRound());
-    //     i++;
-    // }
+       
+        console.log( "PlayerScore is: "+ playerScore +  "\n"+ "ComputerScore is: "+ computerScore);
+   
+    // post who won
 }
-game();
