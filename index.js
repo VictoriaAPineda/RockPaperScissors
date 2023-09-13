@@ -6,6 +6,8 @@ let computerScore = 0;
 
 const btnEls = document.querySelectorAll("button");
 const resultEl = document.querySelector("#results");
+const computerScoreEL = document.querySelector("#compScore");
+const playerScoreEL = document.querySelector("#userScore");
 
 btnEls.forEach((b) =>{
     b.addEventListener('click', ()=>{
@@ -76,9 +78,8 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-
+    
+    computerScoreEL.textContent = computerScore;
+    playerScoreEL.textContent = playerScore;
        
-        console.log( "PlayerScore is: "+ playerScore +  "\n"+ "ComputerScore is: "+ computerScore);
-   
-    // post who won
 }
