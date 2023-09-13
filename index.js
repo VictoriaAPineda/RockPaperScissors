@@ -8,15 +8,16 @@ const btnEls = document.querySelectorAll("button");
 const resultEl = document.querySelector("#results");
 const computerScoreEL = document.querySelector("#compScore");
 const playerScoreEL = document.querySelector("#userScore");
+const outcomeEL =  document.querySelector("#Outcome");
 
 btnEls.forEach((b) =>{
     b.addEventListener('click', ()=>{
         // console.log(b.id +": clicked");
         userChoice = b.textContent;
         compChoice = getComputerChoice();
-        playRound(userChoice, compChoice);
         game();
     });
+
 });
 
 function getComputerChoice(){
@@ -28,7 +29,6 @@ function getComputerChoice(){
     //console.log(options[index]); 
     return choice;
 }
-//getComputerChoice();
 
 function playRound(playerSelection, computerSelection){
     // ignore cases
@@ -37,8 +37,8 @@ function playRound(playerSelection, computerSelection){
     playerChoice = playerSelection.toUpperCase();
     computerChoice = computerSelection.toUpperCase();
     
-    console.log("Playround() Player: " +  playerChoice);
-    console.log("Playround() Computer: " +  computerChoice);
+    // console.log("Playround() Player: " +  playerChoice);
+    // console.log("Playround() Computer: " +  computerChoice);
 
     try {
         if(playerChoice == computerChoice){
@@ -78,8 +78,20 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    
-    computerScoreEL.textContent = computerScore;
-    playerScoreEL.textContent = playerScore;
-       
+   
+    if (playerScore != 5 && computerScore != 5) {
+        playRound(userChoice, compChoice);       
+        computerScoreEL.textContent = computerScore;
+        playerScoreEL.textContent = playerScore;
+        
+    }else{
+        if(playerScore == 5){
+            return outcomeEL.textContent = "Player Wins!";
+        }else{
+            return outcomeEL.textContent = "Computer Wins!";
+        }
+        
+    }
+      
+ 
 }
