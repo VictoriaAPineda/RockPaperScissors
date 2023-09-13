@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection){
         else if(playerChoice == "ROCK" && computerChoice == "PAPER"){
             resultEl.textContent = "Computer chose "+ computerChoice + " You Lose! Paper beats rock.";
             computerScore += 1;
-            // If this win gets a player/computer to win, tells game to announce
+            // If this win gets a player/computer to win, tells game() to announce
             // the winner automatically (without needing to click a choice button again)
             if(computerScore == 5){
                 game();
