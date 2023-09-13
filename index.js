@@ -39,10 +39,10 @@ function playRound(playerSelection, computerSelection){
     
     try {
         if(playerChoice == computerChoice){
-            resultEl.textContent = "Computer chose "+ computerChoice + "It's a tie!"
+            resultEl.textContent = "Computer chose "+ computerChoice + " It's a tie!"
         }
         else if(playerChoice == "ROCK" && computerChoice == "PAPER"){
-            resultEl.textContent = "Computer chose "+ computerChoice + "You Lose! Paper beats rock.";
+            resultEl.textContent = "Computer chose "+ computerChoice + " You Lose! Paper beats rock.";
             computerScore += 1;
             // If this win gets a player/computer to win, tells game to announce
             // the winner automatically (without needing to click a choice button again)
@@ -51,35 +51,35 @@ function playRound(playerSelection, computerSelection){
             }
         }
         else if(playerChoice == "ROCK" && computerChoice == "SCISSORS"){
-            resultEl.textContent = "Computer chose "+ computerChoice + "You WIN! Rock beats scissors.";
+            resultEl.textContent = "Computer chose "+ computerChoice + " You WIN! Rock beats scissors.";
             playerScore += 1;
             if(playerScore == 5){
                 game();
             }
         }
         else if(playerChoice == "PAPER" && computerChoice == "ROCK"){
-            resultEl.textContent = "Copmuter chose "+ computerChoice + "You Lose! Rock beats paper.";
+            resultEl.textContent = "Copmuter chose "+ computerChoice + " You Lose! Rock beats paper.";
             computerScore += 1;
             if(computerScore == 5){
                 game();
             }
         }
         else if(playerChoice == "PAPER" && computerChoice == "SCISSORS"){
-            resultEl.textContent = "Computer chose " + computerChoice + "You Lose! Scissors beats paper.";
+            resultEl.textContent = "Computer chose " + computerChoice + " You Lose! Scissors beats paper.";
             computerScore += 1;
             if(computerScore == 5){
                 game();
             }
         }
         else if(playerChoice == "SCISSORS" && computerChoice == "ROCK"){
-            resultEl.textContent = "Computer chose " + computerChoice + "You Lose! Rock beats scissors.";
+            resultEl.textContent = "Computer chose " + computerChoice + " You Lose! Rock beats scissors.";
             computerScore += 1;
             if(computerScore == 5){
                 game();
             }
         }
         else if(playerChoice == "SCISSORS" && computerChoice == "PAPER"){
-            resultEl.textContent = "Computer chose " + computerChoice + "You Win! Scissors beats paper.";
+            resultEl.textContent = "Computer chose " + computerChoice + " You Win! Scissors beats paper.";
             playerScore += 1;
             if(playerScore == 5){
                 game();
