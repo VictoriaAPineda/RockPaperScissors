@@ -71,11 +71,13 @@ function playRound(playerSelection, computerSelection){
     } catch (error) {
         return "Incorrect Input";
     }
+    // console.log("playround() player " + playerScore);
+    // console.log(" playround() computer " + computerScore);
     
 }
 
 function game(){
-
+    
     if (playerScore == 5) {
         return outcomeEL.textContent = "Player Wins!";
     }else if(computerScore == 5){
@@ -85,5 +87,10 @@ function game(){
         computerScoreEL.textContent = computerScore;
         playerScoreEL.textContent = playerScore;
     }
+    // console.log("game() player " + playerScore);
+    // console.log(" game() computer " + computerScore);
+
+
+
 }
 
