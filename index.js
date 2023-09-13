@@ -12,7 +12,7 @@ const outcomeEL =  document.querySelector("#Outcome");
 
 btnEls.forEach((b) =>{
     b.addEventListener('click', ()=>{
-        // console.log(b.id +": clicked");
+    //  console.log(b.id +": clicked");
         userChoice = b.textContent;
         compChoice = getComputerChoice();
         game();
@@ -37,9 +37,6 @@ function playRound(playerSelection, computerSelection){
     playerChoice = playerSelection.toUpperCase();
     computerChoice = computerSelection.toUpperCase();
     
-    // console.log("Playround() Player: " +  playerChoice);
-    // console.log("Playround() Computer: " +  computerChoice);
-
     try {
         if(playerChoice == computerChoice){
             resultEl.textContent = "Computer chose "+ computerChoice + "\n" + "It's a tie!"
@@ -78,20 +75,14 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-   
-    if (playerScore != 5 && computerScore != 5) {
+    
+    if (playerScore == 5) {
+        return outcomeEL.textContent = "Player Wins!";
+    }else if(computerScore == 5){
+        return outcomeEL.textContent = "Computer Wins!";
+    }else{
         playRound(userChoice, compChoice);       
         computerScoreEL.textContent = computerScore;
         playerScoreEL.textContent = playerScore;
-        
-    }else{
-        if(playerScore == 5){
-            return outcomeEL.textContent = "Player Wins!";
-        }else{
-            return outcomeEL.textContent = "Computer Wins!";
-        }
-        
     }
-      
- 
 }
