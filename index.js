@@ -75,7 +75,7 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    
+
     if (playerScore == 5) {
         return outcomeEL.textContent = "Player Wins!";
     }else if(computerScore == 5){
@@ -86,3 +86,4 @@ function game(){
         playerScoreEL.textContent = playerScore;
     }
 }
+
