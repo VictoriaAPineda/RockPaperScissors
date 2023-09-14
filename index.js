@@ -58,7 +58,7 @@ function playRound(playerSelection, computerSelection){
             }
         }
         else if(playerChoice == "PAPER" && computerChoice == "ROCK"){
-            resultEl.textContent = "Copmuter chose "+ computerChoice + " You Lose! Rock beats paper.";
+            resultEl.textContent = "Computer chose "+ computerChoice + " You Lose! Rock beats paper.";
             computerScore += 1;
             if(computerScore == 5){
                 game();
