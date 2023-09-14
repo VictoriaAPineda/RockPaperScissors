@@ -1,25 +1,31 @@
-
+// gloabl variables
+// initialize choices as strings
 let userChoice = "";
 let compChoice = "";
+
+// initialize counter
 let playerScore = 0;
 let computerScore = 0;
 
+// elements from HTML file
 const btnEls = document.querySelectorAll("button");
 const resultEl = document.querySelector("#results");
 const computerScoreEL = document.querySelector("#compScore");
 const playerScoreEL = document.querySelector("#userScore");
 const outcomeEL =  document.querySelector("#Outcome");
 
+// Assign a event listener to each button
 btnEls.forEach((b) =>{
     b.addEventListener('click', ()=>{
     //  console.log(b.id +": clicked");
-        userChoice = b.textContent;
-        compChoice = getComputerChoice();
+        userChoice = b.textContent; // gets text from button
+        compChoice = getComputerChoice(); // computer random choice
         game();
     });
 
 });
 
+// Radomly select a choice for computer
 function getComputerChoice(){
     const options = ["Rock", "Paper", "Scissors"];
     // 0, 1, 2 respectively of the array
@@ -30,6 +36,8 @@ function getComputerChoice(){
     return choice;
 }
 
+// Compares the choices of Computer and Player, adds to a point counter
+// Outputs results of each round and declares who won.
 function playRound(playerSelection, computerSelection){
     // ignore cases
     let playerChoice = "";
@@ -93,6 +101,8 @@ function playRound(playerSelection, computerSelection){
     }    
 }
 
+// Updates the score of the game
+// Limits a game to 5 rounds only
 function game(){
     
     if (playerScore == 5) {
@@ -100,7 +110,9 @@ function game(){
     }else if(computerScore == 5){
         return outcomeEL.textContent = "Computer Wins!";
     }else{
-        playRound(userChoice, compChoice);       
+        // plays a round
+        playRound(userChoice, compChoice);     
+        // outputs results of rounds in HTML  
         computerScoreEL.textContent = computerScore;
         playerScoreEL.textContent = playerScore;
     }
