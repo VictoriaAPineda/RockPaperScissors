@@ -9,26 +9,30 @@
 </head>
 <body>
 
+
     <div id = "selection">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+        <button class="choice-btn" id="rock">Rock</button>
+        <button class="choice-btn" id="paper">Paper</button>
+        <button class="choice-btn" id="scissors">Scissors</button>
     </div>
 
-    <h3>Result:</h3>
-    <div id="results"></div>
+    <div id="round-result">
+        <h3>Result:</h3>
+        <div id="results"></div>
+    </div>
+    
 
     <h4>Current Scores (First to reach 5pts wins)</h4>
 
     <div id="scores">
-        <p>Computer Score: </p>
+        <p>Computer Score:</p>
         <p id="compScore">0</p>
         
         <p>User Score:</p>
         <p id="userScore">0</p>
-
-        <p id="Outcome"></p>
     </div>
+
+    <p id="Outcome"></p>
 
     <script src="index.js"></script>
 </body>
