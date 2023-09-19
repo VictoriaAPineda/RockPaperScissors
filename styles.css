@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
 }
 
 body{
@@ -30,9 +31,13 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#scores #compScore, 
+#game-info{
+    color: rgb(81, 81, 81);
+}
+#compScore, 
 #userScore{
     margin: 0px 10px;
+    color: red;
 }
 #newGame-btn{
     margin-top: 40px;
