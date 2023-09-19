@@ -117,7 +117,7 @@ function game(){
         playerScoreEL.textContent = playerScore;
     }
 }
-// wip
+// reset the scores
 function newGame(){
     computerScoreEL.textContent = computerScore;
     playerScoreEL.textContent = playerScore;
