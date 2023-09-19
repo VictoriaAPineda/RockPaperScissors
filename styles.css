@@ -34,8 +34,10 @@ body{
 #userScore{
     margin: 0px 10px;
 }
-
-.choice-btn{
+#newGame-btn{
+    margin-top: 40px;
+}
+.choice-btn, #newGame-btn{
     padding: 4px 8px;
     background-color:rgb(60, 64, 111);
     color: white;

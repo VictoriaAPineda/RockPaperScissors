@@ -94,7 +94,7 @@ function playRound(playerSelection, computerSelection){
             }
         }
         else{
-            resultEl.textContent = "Error";
+            resultEl.textContent = "";
         }
     } catch (error) {
         return "Incorrect Input";
@@ -116,5 +116,14 @@ function game(){
         computerScoreEL.textContent = computerScore;
         playerScoreEL.textContent = playerScore;
     }
+}
+// wip
+function newGame(){
+    computerScoreEL.textContent = computerScore;
+    playerScoreEL.textContent = playerScore;
+    resultEl.textContent = "";
+    outcomeEL.textContent= "";
+    playerScore = 0;
+    computerScore = 0;
 }
 
